@@ -178,7 +178,7 @@
                     </div>
                 </div>
                 <div class="show_more-btn">
-                    <button id="show_me"> Show more<i class="fa fa-angle-down" aria-hidden="true"
+                    <button id="show_me">Show More<i class="fa fa-angle-down" aria-hidden="true"
                             style="font-size: 25px;"></i></button>
                 </div>
             </div>
@@ -503,14 +503,20 @@
     <script>
         var a = document.getElementById("show_me");
         let x = document.getElementById("show_more");
+        const l = document.querySelector(".fa fa-angle-down")
         var media = window.matchMedia("(max-width: 840px)")
         a.addEventListener('click', () => {
             if (media.matches) {
                 console.log(x);
                 if (x.style.display === "none") {
                     x.style.display = "block";
+                    document.getElementById('show_me').innerHTML='Show Less <i class="fa fa-angle-up" aria-hidden=\"true\"\
+                            style="font-size: 25px;"></i>';
+                   
                 } else {
                     x.style.display = "none";
+                    document.getElementById('show_me').innerHTML='Show More <i class="fa fa-angle-down" aria-hidden=\"true\"\
+                            style="font-size: 25px;"></i>';
                 }
             }
         })
