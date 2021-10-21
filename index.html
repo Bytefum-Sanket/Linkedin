@@ -160,27 +160,27 @@
                         <div class="my-item pd br1">
                             <label for=""><i class="fa fa-bookmark" aria-hidden="true"></i>My Item</label>
                         </div>
-                        <div class="item br">
-                            <div class="slider-item-list pd bb">
-                                <ul class="slider-item ">
-                                    <li><a href="">Groups</a></li>
-                                    <div class="events">
-                                        <li><a href="">Events</a></li>
-                                        <li>+</li>
-                                    </div>
-                                    <li><a href="">Followed Hashtags</a></li>
-                                </ul>
+                    </div>
+                </div>
+                <div class="item br" id="show_more1">
+                    <div class="slider-item-list pd bb">
+                        <ul class="slider-item ">
+                            <li><a href="">Groups</a></li>
+                            <div class="events">
+                                <li><a href="">Events</a></li>
+                                <li>+</li>
                             </div>
-                            <div class="discover pd">
-                                <p><a href="">Discover more</a></p>
-                            </div>
-                        </div>
+                            <li><a href="">Followed Hashtags</a></li>
+                        </ul>
+                    </div>
+                    <div class="discover pd">
+                        <p><a href="">Discover more</a></p>
                     </div>
                 </div>
                 <div class="show_more-btn">
                     <button id="show_me">Show More<i class="fa fa-angle-down" aria-hidden="true"
-                            style="font-size: 25px;"></i></button>
-                </div>
+                        style="font-size: 25px;"></i></button>
+                    </div>
             </div>
             <main>
                 <div>
@@ -444,6 +444,7 @@
                             </ul>
                         </div>
                     </div>
+                </div>
                     <div class="ad pd br">
                         <div class="ad-menu">
                             <h5>Ad</h5>
@@ -467,7 +468,6 @@
                             <button class="btn">FOLLOW</button>
                         </div>
                     </div>
-                </div>
                 <footer class="footer">
                     <div class="website-info">
                         <div class="web-info-list">
@@ -503,18 +503,20 @@
     <script>
         var a = document.getElementById("show_me");
         let x = document.getElementById("show_more");
-        const l = document.querySelector(".fa fa-angle-down")
+        let b = document.getElementById("show_more1");
         var media = window.matchMedia("(max-width: 840px)")
         a.addEventListener('click', () => {
             if (media.matches) {
                 console.log(x);
-                if (x.style.display === "none") {
+                if (x.style.display === "none" && b.style.display === "none" ) {
                     x.style.display = "block";
+                    b.style.display = "block";
                     document.getElementById('show_me').innerHTML='Show Less <i class="fa fa-angle-up" aria-hidden=\"true\"\
                             style="font-size: 25px;"></i>';
                    
                 } else {
                     x.style.display = "none";
+                    b.style.display = "none";
                     document.getElementById('show_me').innerHTML='Show More <i class="fa fa-angle-down" aria-hidden=\"true\"\
                             style="font-size: 25px;"></i>';
                 }

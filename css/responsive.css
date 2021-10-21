@@ -35,6 +35,14 @@
     #show_more{
         display: block !important; 
     }
+    #show_more1{
+        display: block !important; 
+    }
+    .item{
+        width: 100%;
+        position: sticky;
+        top: 70px;
+    }
 }
 @media screen and (max-width:840px) {
     span {
@@ -52,6 +60,9 @@
         border: none;
     }
     #show_more{
+        display: none; 
+    }
+    #show_more1{
         display: none; 
     }
     .show_more-btn{
