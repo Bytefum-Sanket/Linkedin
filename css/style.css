@@ -224,8 +224,8 @@ span i{
     padding: 12px 12px 16px;
 }
 .bgimg{
-    background-image: url("/img/bg-img.jpg");
-    background-position: center;
+    background-image: url("../img/bg-img.jpg");
+    background-position: center; 
     background-size: 462px;
     display: block;
     height: 54px;
@@ -539,8 +539,8 @@ main{
     color: #0A66C2;
     border-bottom:1px solid #0A66C2; ;
 }
-.footer-img{
-    object-fit: cover;
+.footer-img img{
+    object-fit: contain;
 }
 .copyright{
     display: flex;
